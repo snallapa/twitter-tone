@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ScoreTable from './ScoreTable';
 
 class Overall extends Component {
@@ -6,14 +6,12 @@ class Overall extends Component {
     if (this.props.overall.length === 0) {
       return false;
     }
-    return (
-      <div>
-        <h1>Overall</h1>
-        <div className="overall__score">
-            <ScoreTable scores={this.props.overall} />
-        </div>
+    return (<div>
+      <h1>Overall</h1>
+      <div className="overall__score">
+        <ScoreTable scores={this.props.overall}/>
       </div>
-    );
+    </div>);
   }
 }
 
