@@ -37,7 +37,7 @@ def test(term):
         #tweets = json.load(data)
     tones = []
     for tweet in tweets:
-        tones.append(tone_analyzer.tone(tone_input=tweet["text"], sentences=True, content_type='text/plain'))
+        tones.append(tone_analyzer.tone(tone_input=tweet["text"], sentences=False, content_type='text/plain'))
     #with open('test.json') as data_file:
         #tones = json.load(data_file)
     tones = [tone["document_tone"] for tone in tones]

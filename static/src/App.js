@@ -18,8 +18,9 @@ class App extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.setState({...this.state, loading: true})
-    fetch(`/tone/${this.state.value}`).then((res) => {
+    this.setState({...this.state, loading: true});
+
+    fetch(`/tone/${this.state.value.replace("#", "")}`).then((res) => {
       res.json().then((data) => {
         this.setState({value: this.state.value, overall: data.overall, tweets: data.individual, loading: false});
       });
